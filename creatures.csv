@@ -1,0 +1,101 @@
+id,name,element,hp,subtype,weakness,resistance,retreat,style_icon,affinity_icon,evo_stage,attack1_name,attack1_cost,attack1_damage,attack1_text,attack2_name,attack2_cost,attack2_damage,attack2_text,image_file
+1,Pyroo,Fire,60,Fire Creature,Water,Nature,3,fist,fire,1,Ember Flick,FF,40,Shoots small sparks to damage and distract foes.,Warm Glow,FF,60,Slightly heals allies nearby each turn.,1-pyroo-base.png
+1e,Pyroth,Fire,90,Fire Creature,Water,Nature,2,fist,solar,2,Solar Flare,FFF,65,Unleashes intense fire waves in a wide area.,Blazing Body,FFF,85,Passive: damages attackers on contact.,1e-pyroth-evo.png
+2,Cindlet,Fire,58,Fire Creature,Water,Nature,3,fist,fire,1,Spark Dance,FF,40,Rapid unpredictable fire attacks.,Heat Wave,FF,60,Temporarily boosts fire attacks of allies.,2-cindlet-base.png
+2e,Infernik,Fire,88,Fire Creature,Water,Nature,2,fist,dark,2,Inferno Burst,FFF,65,Engulfs enemies in dark flames.,Shadow Heat,FFF,85,Drains energy from opponents over time.,2e-infernik-evo.png
+3,Flamara,Fire,62,Fire Creature,Water,Nature,3,fist,fire,1,Molten Tail,FF,35,Strikes with a fiery tail swipe.,Lava Step,FF,55,Leaves burning patches that damage enemies.,3-flamara-base.png
+3e,Volcarion,Fire,95,Fire Creature,Water,Nature,2,fist,earth,2,Eruption,FF,60,Massive area-of-effect lava explosion.,Magma Armor,FFF,80,Reduces damage and burns attackers.,3e-volcarion-evo.png
+4,Emberoo,Fire,55,Fire Creature,Water,Nature,2,fist,fire,1,Ember Dash,FF,45,Quick strike leaving burning trails.,Flicker Flame,FFF,65,Evades attacks and confuses enemies.,4-emberoo-base.png
+4e,Magmara,Fire,85,Fire Creature,Water,Nature,1,fist,plasma,2,Plasma Burst,FFF,70,Launches high-energy fireballs.,Raging Heat,FFF,90,Boosts speed and attack after taking damage.,4e-magmara-evo.png
+5,Aquabub,Water,62,Water Creature,Electric,Fire,3,leaf,water,1,Bubble Shot,WW,35,Fires bubbles to trap or damage foes.,Soothing Flow,WW,55,Heals minor damage to allies.,5-aquabub-base.png
+5e,Aquarion,Water,95,Water Creature,Electric,Fire,2,leaf,light,2,Tidal Wave,WW,55,Sweeps enemies with crushing water.,Radiant Stream,WWW,75,Heals allies while damaging undead or dark foes.,5e-aquarion-evo.png
+6,Drizzlew,Water,60,Water Creature,Electric,Fire,3,leaf,water,1,Rain Mist,WW,35,Lowers enemy accuracy with heavy fog.,Moisture Absorb,WW,55,Restores minor energy each turn.,6-drizzlew-base.png
+6e,Typhoonix,Water,92,Water Creature,Electric,Fire,2,leaf,wind,2,Typhoon Strike,WW,55,Massive wind-and-water combo attack.,Storm Shield,WWW,75,Reduces damage from ranged attacks.,6e-typhoonix-evo.png
+7,Tideroo,Water,65,Water Creature,Electric,Fire,3,leaf,water,1,Wave Slam,WW,35,Slams enemies with powerful waves.,Current Drift,WW,55,Moves unpredictablydodging attacks.,7-tideroo-base.png
+7e,Leviadon,Water,98,Water Creature,Electric,Fire,2,leaf,void,2,Void Tsunami,WW,60,Summons dark waves that damage and confuse.,Abyssal Grip,WWW,80,Restrains opponents while dealing damage.,7e-leviadon-evo.png
+8,Bubbloon,Water,58,Water Creature,Electric,Fire,3,leaf,water,1,Bubble Shield,W,30,Protects itself or allies with floating bubbles.,Splash Kick,WW,50,Quick water strike to disorient foes.,8-bubbloon-base.png
+8e,Ocealon,Water,90,Water Creature,Electric,Fire,2,leaf,psychic,2,Hydro Mind,WW,50,Mental attack using pressurized water.,Pressure Crush,WWW,70,Squeezes enemies with water telekinesis.,8e-ocealon-evo.png
+9,Railimp,Electric,55,Electric Creature,Earth,Water,2,tech,electric,1,Spark Hop,EE,40,Leaps between targetsshocking each.,Static Charge,EE,60,Small chance to paralyze attackers.,9-railimp-base.png
+9e,Railzar,Electric,85,Electric Creature,Earth,Water,1,tech,steel,2,Overload Strike,EEE,70,High-voltage attack that can disable enemies.,Metal Conduct,EEE,90,Absorbs electric damage to boost attacks.,9e-railzar-evo.png
+10,Voltkit,Electric,58,Electric Creature,Earth,Water,2,tech,electric,1,Zap Blast,EE,40,Shoots small electrical bolts.,Charge Spark,EE,60,Gains speed after each attack.,10-voltkit-base.png
+10e,Voltitan,Electric,90,Electric Creature,Earth,Water,1,tech,plasma,2,Thunderstorm,EEE,65,Large-scale electric attack on all enemies.,Plasma Surge,EEE,85,Temporarily boosts electric attacks.,10e-voltitan-evo.png
+11,Zaplet,Electric,54,Electric Creature,Earth,Water,2,tech,electric,1,Jolt Burst,EE,40,Sudden shock causing paralysis.,Energy Flicker,EE,60,Evades attacks intermittently.,11-zaplet-base.png
+11e,Stormvolt,Electric,84,Electric Creature,Earth,Water,1,tech,wind,2,Tempest Shock,EEE,70,Combines wind and lightning for massive damage.,Storm Aura,EEE,90,Damages enemies each turn nearby.,11e-stormvolt-evo.png
+12,Sparkbit,Electric,60,Electric Creature,Earth,Water,3,tech,electric,1,Core Discharge,EE,35,Releases stored electricity for burst damage.,Static Field,EE,55,Slightly slows enemy movement.,12-sparkbit-base.png
+12e,Thundrake,Electric,92,Electric Creature,Earth,Water,1,tech,crystal,2,Crystal Thunder,EE,55,Strikes with electrified crystal shards.,Storm Roar,EEE,75,Boosts allies’ speed and electric damage.,12e-thundrake-evo.png
+13,Leaflet,Nature,64,Nature Creature,Fire,Water,3,leaf,nature,1,Leaf Slice,N,30,Quick slashes with sharp leaves.,Photosynthesis,NN,50,Gradually restores health in sunlight.,13-leaflet-base.png
+13e,Floragon,Nature,98,Nature Creature,Fire,Water,2,leaf,earth,2,Vine Crush,NN,55,Entangles and damages enemies.,Nature’s Guard,NNN,75,Boosts defense and heals allies nearby.,13e-floragon-evo.png
+14,Mosspry,Nature,62,Nature Creature,Fire,Water,3,leaf,nature,1,Moss Wrap,N,30,Slows enemies by entangling them.,Rejuvenate,NN,50,Restores minor health to self.,14-mosspry-base.png
+14e,Verdantor,Nature,95,Nature Creature,Fire,Water,2,leaf,poison,2,Toxic Bloom,NN,50,Spreads poisonous spores.,Ancient Roots,NNN,70,Restrains enemies and boosts self-defense.,14e-verdantor-evo.png
+15,Thornel,Nature,60,Nature Creature,Fire,Water,3,leaf,nature,1,Thorn Barrage,NN,35,Throws sharp thorns at attackers.,Spiky Guard,NN,55,Damages melee attackers on contact.,15-thornel-base.png
+15e,Briarthorn,Nature,92,Nature Creature,Fire,Water,2,leaf,dark,2,Briar Trap,NN,60,Immobilizes and injures enemies.,Dark Bloom,NNN,80,Dark energy increases attack over time.,15e-briarthorn-evo.png
+16,Petalisk,Nature,58,Nature Creature,Fire,Water,3,leaf,nature,1,Petal Storm,NN,35,Cuts enemies with swirling petals.,Healing Fragrance,NN,55,Restores health to nearby allies.,16-petalisk-base.png
+16e,Bloomra,Nature,90,Nature Creature,Fire,Water,2,leaf,light,2,Solar Petals,NN,55,Light-infused petal attack.,Radiant Bloom,NNN,75,Heals allies and buffs attack.,16e-bloomra-evo.png
+17,Frostip,Ice,60,Ice Creature,Fire,Water,3,leaf,ice,1,Ice Shard,II,35,Launches sharp shards of ice.,Chilling Aura,II,55,Slightly slows enemies nearby.,17-frostip-base.png
+17e,Glacilisk,Ice,92,Ice Creature,Fire,Water,2,leaf,crystal,2,Crystal Freeze,II,55,Powerful ice attack that can freeze foes.,Glacial Armor,III,75,Reduces damage from physical attacks.,17e-glacilisk-evo.png
+18,Chillbit,Ice,58,Ice Creature,Fire,Water,3,leaf,ice,1,Frost Breath,I,30,Freezes opponents in a cone.,Icy Step,II,50,Evades attacks while leaving slippery terrain.,18-chillbit-base.png
+18e,Cryonix,Ice,90,Ice Creature,Fire,Water,2,leaf,void,2,Void Freeze,II,50,Freezes enemies and drains energy.,Frozen Veil,III,70,Reduces incoming damage and reflects cold.,18e-cryonix-evo.png
+19,Icelo,Ice,62,Ice Creature,Fire,Water,3,leaf,ice,1,Snow Strike,I,30,Quick ice attacks from all sides.,Glacial Drift,II,50,Moves silently to dodge attacks.,19-icelo-base.png
+19e,Glacieron,Ice,95,Ice Creature,Fire,Water,2,leaf,water,2,Ice Tsunami,II,50,Sends massive ice waves forward.,Frozen Shield,III,70,Absorbs damage and freezes melee attackers.,19e-glacieron-evo.png
+20,Snowlet,Ice,56,Ice Creature,Fire,Water,3,leaf,ice,1,Snowball Toss,II,35,Hurls ice balls at enemies.,Winter Chill,II,55,Reduces enemy speed.,20-snowlet-base.png
+20e,Avalith,Ice,88,Ice Creature,Fire,Water,2,leaf,earth,2,Avalanche,II,55,Crashes down to deal area damage.,Earth Freeze,III,75,Mixes ice and earth to immobilize foes.,20e-avalith-evo.png
+21,Gearling,Steel,65,Steel Creature,Poison,Crystal,3,fist,steel,1,Gear Spin,SS,40,Strikes enemies with spinning gears.,Metal Repair,SS,60,Slowly restores its own health.,21-gearling-base.png
+21e,Mechadon,Steel,1,Steel Creature,Poison,Crystal,2,fist,tech,2,Titan Slam,SSS,70,Smashes the grounddealing massive damage.,Reinforced Armor,SSS,90,Reduces incoming damage for several turns.,21e-mechadon-evo.png
+22,Boltgear,Steel,62,Steel Creature,Poison,Crystal,3,fist,steel,1,Shock Gear,SS,40,Strikes with electrified gears.,Conductive Core,SS,60,Small chance to paralyze attackers.,22-boltgear-base.png
+22e,Ferrovolt,Steel,95,Steel Creature,Poison,Crystal,2,fist,electric,2,Volt Slam,SSS,70,Electric-infused crushing strike.,Magnetic Field,SSS,90,Pulls enemies closer and reduces mobility.,22e-ferrovolt-evo.png
+23,Umbrin,Dark,58,Dark Creature,Light,Poison,3,tech,dark,1,Shadow Claw,DD,40,Strikes from the shadows for extra damage.,Night Veil,DD,60,Reduces enemy accuracy while hidden.,23-Umbrin-base.png
+23e,Dreadshade,Dark,90,Dark Creature,Light,Poison,2,tech,void,2,Void Slash,DDD,70,Deals heavy dark damage ignoring defense.,Shadow Consumption,DDD,90,Restores health from damaged enemies.,23e-dreadshade-evo.png
+24,Noctyke,Dark,60,Dark Creature,Light,Poison,3,tech,dark,1,Night Bite,DD,40,Quick attack with a chance to stun.,Shadow Blend,DD,60,Temporarily becomes untargetable.,24-noctyke-base.png
+24e,Abyssion,Dark,92,Dark Creature,Light,Poison,2,tech,psychic,2,Mind Eclipse,DDD,65,Confuses all enemies temporarily.,Abyssal Roar,DDD,85,Deals psychic damage to all nearby foes.,24e-abyssion-evo.png
+25,Lumini,Light,58,Light Creature,Dark,Crystal,3,star,light,1,Shining Beam,L,30,Light attack that may blind opponents.,Healing Glow,LL,50,Restores minor health to allies.,25-lumini-base.png
+25e,Solariux,Light,90,Light Creature,Dark,Crystal,2,star,solar,2,Solar Flare,LL,55,Massive light-based attack on all enemies.,Radiant Shield,LLL,75,Reduces damage taken by allies nearby.,25e-solariux-evo.png
+26,Radiant,Light,60,Light Creature,Dark,Crystal,3,star,light,1,Glow Strike,L,30,Attacks with concentrated beams of light.,Calming Radiance,LL,50,Reduces enemy aggression for a turn.,26-radiant-base.png
+26e,Aurorion,Light,92,Light Creature,Dark,Crystal,2,star,crystal,2,Prismatic Beam,LL,50,Multi-hit light attack that ignores resistances.,Crystal Ward,LLL,70,Shields allies and reflects a portion of damage.,26e-aurorion-evo.png
+27,Mindlet,Psychic,55,Psychic Creature,Dark,Light,3,tech,psychic,1,Telekinesis,P,25,Moves enemy objects to cause damage.,Mind Link,PP,45,Shares energy with allies to restore minor health.,27-mindlet-base.png
+27e,Cerebron,Psychic,85,Psychic Creature,Dark,Light,2,tech,gravity,2,Gravity Crush,PP,45,Warps gravity to slam enemies down.,Mental Overload,PPP,65,Deals psychic damage and lowers enemy defenses.,27e-cerebron-evo.png
+28,Psybit,Psychic,58,Psychic Creature,Dark,Light,3,tech,psychic,1,Mind Tap,P,30,Drains small energy from a foe.,Aura Shield,PP,50,Increases own resistance to attacks.,28-psybit-base.png
+28e,Neurozar,Psychic,90,Psychic Creature,Dark,Light,2,tech,void,2,Void Pulse,PP,45,Damages all enemies and lowers accuracy.,Neural Link,PPP,65,Boosts allies’ psychic damage temporarily.,28e-neurozar-evo.png
+29,Chiplet,Tech,60,Tech Creature,Poison,Electric,3,tech,tech,1,Data Spike,T,30,Sends sharp code fragments at enemies.,System Patch,TT,50,Restores minor self-health over time.,29-chiplet-base.png
+29e,Datadon,Tech,92,Tech Creature,Poison,Electric,1,tech,steel,2,Network Overload,TT,45,Damages all enemies in range.,Firewall Shield,TTT,65,Reduces incoming damage significantly.,29e-datadon-evo.png
+30,Bytebug,Tech,58,Tech Creature,Poison,Electric,3,tech,tech,1,Glitch Strike,T,30,Random multi-hit attack.,System Hack,TT,50,Temporarily lowers enemy defenses.,30-bytebug-base.png
+30e,Netronix,Tech,90,Tech Creature,Poison,Electric,1,tech,electric,2,Cyber Shock,TT,50,High-voltage tech attack on multiple foes.,Data Shield,TTT,70,Absorbs some damage and boosts speed.,30e-netronix-evo.png
+31,Plasmid,Plasma,56,Plasma Creature,Earth,Electric,3,tech,plasma,1,Plasma Bolt,P,30,Fires concentrated plasma energy.,Energy Pulse,PP,50,Slightly heals self with residual energy.,31-plasmid-base.png
+31e,Ionar,Plasma,88,Plasma Creature,Earth,Electric,1,tech,electric,2,Ion Storm,PP,55,Damages all enemies with unstable plasma.,Charged Core,PPP,75,Boosts attack after taking damage.,31e-ionar-evo.png
+32,Fluxbit,Plasma,60,Plasma Creature,Earth,Electric,3,tech,plasma,1,Plasma Flicker,PP,35,Hits random enemies rapidly.,Energy Shift,PP,55,Temporarily evades attacks.,32-fluxbit-base.png
+32e,Voltflux,Plasma,92,Plasma Creature,Earth,Electric,1,tech,tech,2,Flux Cannon,PP,55,Massive plasma energy strike.,Overload,PPP,75,Damages nearby enemies each turn passively.,32e-voltflux-evo.png
+33,Breezle,Wind,58,Wind Creature,Electric,Earth,2,tech,wind,1,Gust Swipe,W,30,Hits enemies with swift air currents.,Soothing Wind,WW,50,Slightly restores allies’ speed.,33-breezle-base.png
+33e,Tempestral,Wind,90,Wind Creature,Electric,Earth,1,tech,water,2,Hurricane Blast,WW,55,Damages and may confuse enemies.,Tempest Shield,WWW,75,Reduces damage from ranged attacks.,33e-tempestral-evo.png
+34,Gustwing,Wind,60,Wind Creature,Electric,Earth,2,tech,wind,1,Air Slash,WW,35,Quicksharp wind attack.,Wind Veil,WW,55,Temporarily increases evasion.,34-gustwing-base.png
+34e,Skyvane,Wind,92,Wind Creature,Electric,Earth,1,tech,electric,2,Storm Surge,WW,55,Combines wind and electricity for massive area damage.,Zephyr Boost,WWW,75,Boosts allies’ speed temporarily.,34e-skyvane-evo.png
+35,Peblite,Earth,65,Earth Creature,Water,Electric,3,fist,earth,1,Rock Toss,EE,40,Throws boulders at enemies.,Stone Skin,EE,60,Reduces damage from physical attacks.,35-peblite-base.png
+35e,Terradon,Earth,1,Earth Creature,Water,Electric,3,fist,steel,2,Earthquake,EEE,70,Massive area damage.,Steel Reinforce,EEE,90,Boosts defense and reduces damage.,35e-terradon-evo.png
+36,Gravbit,Earth,62,Earth Creature,Water,Electric,3,fist,earth,1,Seismic Punch,EE,35,Smashes the ground causing tremors.,Gravitational Pull,EE,55,Slows enemies nearby.,36-gravbit-base.png
+36e,Quakodon,Earth,95,Earth Creature,Water,Electric,3,fist,gravity,2,Gravity Slam,EEE,65,Heavy attack pulling enemies in.,Tectonic Shield,EEE,85,Reduces damage and resists status effects.,36e-quakodon-evo.png
+37,Venomip,Poison,58,Poison Creature,Crystal,Nature,3,fist,poison,1,Poison Fang,PP,35,Bites with toxic effect over time.,Venom Spit,PP,55,Ranged poison attack.,37-venomip-base.png
+37e,Toxirant,Poison,90,Poison Creature,Crystal,Nature,2,fist,dark,2,Toxic Cloud,PP,60,Covers area with harmful gas.,Dark Venom,PPP,80,Damages and weakens enemies over time.,37e-toxirant-evo.png
+38,Sludgel,Poison,60,Poison Creature,Crystal,Nature,3,fist,poison,1,Acid Splash,P,30,Ranged acidic attack.,Corrosive Skin,PP,50,Damages melee attackers.,38-sludgel-base.png
+38e,Venomar,Poison,92,Poison Creature,Crystal,Nature,2,fist,toxic,2,Sludge Wave,PP,55,Area poison attack.,Toxic Barrier,PPP,75,Reduces damage and poisons attackers.,38e-venomar-evo.png
+39,Shardlet,Crystal,62,Crystal Creature,Poison,Light,3,leaf,crystal,1,Crystal Shard,CC,35,Shoots piercing crystal shards.,Reflective Surface,CC,55,Reflects some damage back to attackers.,39-shardlet-base.png
+39e,Crystallix,Crystal,95,Crystal Creature,Poison,Light,2,leaf,light,2,Prismatic Blast,CC,55,Multi-hit crystal attack.,Light Prism,CCC,75,Boosts allies’ light damage temporarily.,39e-crystallix-evo.png
+40,Prismite,Crystal,58,Crystal Creature,Poison,Light,3,leaf,crystal,1,Gem Strike,C,30,Strikes with sharp gemstone.,Radiant Shield,CC,50,Absorbs minor damage.,40-prismite-base.png
+40e,Gemlurion,Crystal,90,Crystal Creature,Poison,Light,2,leaf,psychic,2,Prism Crush,CC,55,Multi-target crystal attack.,Mind Reflection,CCC,75,Deals psychic damage when hit.,40e-gemlurion-evo.png
+41,Gravimp,Gravity,65,Gravity Creature,Void,Earth,3,tech,gravity,1,Gravity Slam,GG,35,Smashes enemies with increased weight.,Pull Field,GG,55,Draws nearby enemies closerreducing mobility.,41-gravimp-base.png
+41e,Massadon,Gravity,1,Gravity Creature,Void,Earth,3,tech,earth,2,Crushing Gravity,GGG,65,Deals heavy area damage by increasing gravity.,Titanic Weight,GGG,85,Reduces all incoming damage temporarily.,41e-massadon-evo.png
+42,Orbitix,Gravity,60,Gravity Creature,Void,Earth,3,tech,gravity,1,Orbit Strike,GG,35,Attacks from unexpected directions.,Field Shift,GG,55,Slightly increases evasion by manipulating gravity.,42-orbitix-base.png
+42e,Gravion,Gravity,92,Gravity Creature,Void,Earth,2,tech,void,2,Singularity,GG,55,Pulls enemies into a gravity vortexdealing damage.,Void Gravity,GGG,75,Reduces speed and attack of all affected enemies.,42e-gravion-evo.png
+43,Acidbit,Toxic,58,Toxic Creature,Crystal,Nature,3,fist,toxic,1,Acid Splash,TT,35,Ranged acidic attack causing damage over time.,Corrode,TT,55,Weakens enemy defenses temporarily.,43-acidbit-base.png
+43e,Corrothon,Toxic,90,Toxic Creature,Crystal,Nature,2,fist,poison,2,Acid Wave,TT,60,Covers a large area with destructive acid.,Toxic Aura,TTT,80,Damages nearby enemies each turn.,43e-corrothon-evo.png
+44,Fumlet,Toxic,60,Toxic Creature,Crystal,Nature,3,fist,toxic,1,Poison Cloud,T,30,Ranged attack that may poison enemies.,Smog Veil,TT,50,Reduces enemy accuracy for a few turns.,44-fumlet-base.png
+44e,Blightmaw,Toxic,92,Toxic Creature,Crystal,Nature,2,fist,dark,2,Blight Storm,TT,55,Area-of-effect poison and dark damage.,Corrosive Maw,TTT,75,Bites enemies and weakens their attack.,44e-blightmaw-evo.png
+45,Sunlet,Solar,60,Solar Creature,Void,Nature,3,star,solar,1,Sunbeam,SS,35,Shoots focused sunlight to damage foes.,Solar Heal,SS,55,Restores minor health to self or allies.,45-sunlet-base.png
+45e,Solaron,Solar,92,Solar Creature,Void,Nature,2,star,fire,2,Flare Strike,SS,55,High-damage fire and light attack.,Stellar Shield,SSS,75,Reduces incoming damage for several turns.,45e-solaron-evo.png
+46,Heliorb,Solar,58,Solar Creature,Void,Nature,3,star,solar,1,Radiant Orb,S,30,Launches concentrated sunlight at enemies.,Light Barrier,SS,50,Slightly boosts ally defense temporarily.,46-heliorb-base.png
+46e,Radiara,Solar,90,Solar Creature,Void,Nature,2,star,light,2,Solar Nova,SS,55,Devastating area-of-effect light attack.,Radiant Aura,SSS,75,Boosts allies’ light damage and healing effects.,46e-radiara-evo.png
+47,Moonlit,Lunar,58,Lunar Creature,Void,Psychic,3,star,lunar,1,Moonbeam,L,30,Light attack with a chance to confuse enemies.,Lunar Calm,LL,50,Reduces enemy attack slightly for a turn.,47-moonlit-base.png
+47e,Lunara,Lunar,90,Lunar Creature,Void,Psychic,2,star,psychic,2,Moon Pulse,LL,50,Psychic attack that deals damage and reduces defense.,Lunar Blessing,LLL,70,Restores health to all allies in range.,47e-lunara-evo.png
+48,Orbix,Lunar,60,Lunar Creature,Void,Psychic,3,star,lunar,1,Orb Strike,L,30,Rapidprecise attacks from all angles.,Moon Drift,LL,50,Slight evasion boost while in motion.,48-orbix-base.png
+48e,Umbrelune,Lunar,92,Lunar Creature,Void,Psychic,2,star,dark,2,Eclipse Slash,LL,55,Dark and lunar damage combined in a wide attack.,Shadow Moon,LLL,75,Reduces enemy accuracy and evasion.,48e-Umbrelune-evo.png
+49,Voidlet,Void,56,Void Creature,Light,Gravity,3,tech,void,1,Void Pulse,VV,35,Damages enemies and ignores defense.,Empty Grasp,VV,55,Slight chance to trap enemies for a turn.,49-voidlet-base.png
+49e,Nullion,Void,88,Void Creature,Light,Gravity,2,tech,gravity,2,Black Hole,VV,60,Pulls enemies in and deals massive void damage.,Gravity Drain,VVV,80,Reduces enemies’ speed and attack while restoring own energy.,49e-nullion-evo.png
+50,Riftbit,Void,58,Void Creature,Light,Gravity,3,tech,void,1,Dimensional Slash,VV,35,Strikes enemies through spaceignoring evasion.,Rift Step,VV,55,Moves unpredictably to avoid attacks.,50-riftbit-base.png
+50e,Abyssalon,Void,90,Void Creature,Light,Gravity,2,tech,dark,2,Void Crush,VV,55,High-damage attack affecting all foes.,Abyssal Rift,VVV,75,Creates rifts that damage and disorient enemies over time.,50e-abyssalon-evo.png

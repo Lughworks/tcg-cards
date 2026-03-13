@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIP & Collect | Series Database</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        .font-gta { font-family: 'Anton', sans-serif; }
+        body { 
+            background-color: #09090b; 
+            color: white; 
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .perspective-1000 { perspective: 1000px; }
+        .preserve-3d { transform-style: preserve-3d; }
+
+        .card-glare {
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 60%);
+            mix-blend-mode: overlay;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s;
+            z-index: 30;
+            border-radius: 1rem;
+        }
+        .card-container:hover .card-glare { opacity: 1; }
+
+        .active-tab {
+            background-color: #f97316;
+            color: black;
+            border-color: #f97316;
+        }
+        
+        .full-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 1rem;
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #18181b; }
+        ::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #f97316; }
+    </style>
+</head>
+<body class="selection:bg-orange-500 selection:text-black">
+
+    <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md border-b border-zinc-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-orange-500 p-2 rounded-lg">
+                    <svg class="w-6 h-6 text-black fill-current" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-gta text-2xl tracking-tight text-white uppercase italic leading-none">RIP & COLLECT</span>
+                    <span class="text-[10px] font-bold tracking-[0.3em] text-orange-500 uppercase leading-none mt-1">Series 1e Expansion</span>
+                </div>
+            </div>
+            
+            <div class="hidden lg:flex gap-1 bg-zinc-900/50 p-1 rounded-full border border-zinc-800">
+                <button onclick="switchTab('base')" id="tab-base" class="nav-tab px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all">Base</button>
+                <button onclick="switchTab('evolved')" id="tab-evolved" class="nav-tab px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all">Evolved</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 flex justify-between items-end">
+                <div>
+                    <h2 id="pageTitle" class="font-gta text-6xl uppercase italic text-white tracking-tighter tracking-widest">BASE</h2>
+                    <p id="pageDescription" class="text-zinc-500 text-xs font-bold tracking-[0.2em] uppercase mt-2">Primary Creature Forms</p>
+                </div>
+                <div class="text-right flex flex-col items-end">
+                    <span id="cardCount" class="text-orange-500 font-mono text-xl font-bold">00</span>
+                    <p class="text-[10px] text-zinc-600 font-bold uppercase tracking-widest">Cards Loaded</p>
+                    <div id="loadingStatus" class="text-[8px] text-zinc-500 uppercase mt-1 hidden italic">Fetching Files...</div>
+                </div>
+            </div>
+
+            <div id="cardGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const FILE_LOCATIONS = {
+            csv: {
+                creatures: 'creatures.csv'
+            },
+            images: {
+                // rendered base + evo card PNGs
+                creatures_cards: 'cards/'
+            }
+        };
+
+        let currentTab = 'base';
+        let creaturesData = [];
+
+        async function loadData() {
+            const status = document.getElementById('loadingStatus');
+            status.classList.remove('hidden');
+            
+            try {
+                const creaturesRes = await fetch(FILE_LOCATIONS.csv.creatures);
+                const creaturesText = await creaturesRes.text();
+                creaturesData = parseCSV(creaturesText);
+                status.classList.add('hidden');
+                switchTab('base'); 
+            } catch (error) {
+                console.error('Error loading CSV files:', error);
+                status.innerText = "Error Loading CSV Data";
+                status.classList.add('text-red-500');
+            }
+        }
+
+        function parseCSV(text) {
+            const lines = text.trim().split('\n');
+            if (lines.length === 0) return [];
+            
+            const headers = lines[0].split(',').map(h => h.trim());
+            return lines.slice(1).map(line => {
+                const values = line.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) || [];
+                const obj = {};
+                headers.forEach((h, i) => {
+                    let val = values[i] ? values[i].trim() : "";
+                    obj[h] = val.replace(/^"|"$/g, ''); 
+                });
+                return obj;
+            });
+        }
+
+        function switchTab(tabId) {
+            currentTab = tabId;
+            document.querySelectorAll('.nav-tab').forEach(btn => btn.classList.remove('active-tab'));
+            document.getElementById(`tab-${tabId}`).classList.add('active-tab');
+            
+            const titles = {
+                base:    { t: "BASE",    d: "Primary Creature Forms" },
+                evolved: { t: "EVOLVED", d: "Advanced Creature Forms" }
+            };
+            
+            document.getElementById('pageTitle').innerText = titles[tabId].t;
+            document.getElementById('pageDescription').innerText = titles[tabId].d;
+            render();
+        }
+
+        function render() {
+            const grid = document.getElementById('cardGrid');
+            let html = '';
+            let list = [];
+
+            if (currentTab === 'base') {
+                // image_file like "1-pyroo-base.png"
+                list = creaturesData.filter(c => c.image_file.endsWith('-base.png'));
+            } else if (currentTab === 'evolved') {
+                // image_file like "1e-pyroth-evo.png"
+                list = creaturesData.filter(c => c.image_file.endsWith('-evo.png'));
+            }
+
+            const folder = FILE_LOCATIONS.images.creatures_cards;
+
+            html = list.map(card => {
+                const imgName = card.image_file;
+                return generateCardHTML(folder, imgName);
+            }).join('');
+
+            grid.innerHTML = html;
+            document.getElementById('cardCount').innerText =
+                list.length < 10 ? `0${list.length}` : list.length;
+        }
+
+        function generateCardHTML(folder, imgName) {
+            return `
+            <div class="perspective-1000 card-container cursor-pointer group">
+                <div class="preserve-3d relative w-full aspect-[2.5/3.5] transition-all duration-500"
+                     onmousemove="handleTilt(event, this)" onmouseleave="resetTilt(this)">
+                    <div class="absolute inset-0">
+                        <img src="${folder}${imgName}" 
+                             class="full-card-img shadow-2xl transition-transform" 
+                             onerror="handleImageError(this, '${imgName}')">
+                    </div>
+                    <div class="absolute inset-0 card-glare"></div>
+                </div>
+            </div>`;
+        }
+
+        function handleImageError(img, originalName) {
+            if (originalName && originalName.endsWith('.png')) {
+                const newSrc = img.src.replace('.png', '.jpg');
+                img.onerror = () => {
+                    img.src = 'https://via.placeholder.com/500x700?text=Not+Found';
+                    img.onerror = null;
+                };
+                img.src = newSrc;
+            } else {
+                img.src = 'https://via.placeholder.com/500x700?text=Not+Found';
+                img.onerror = null;
+            }
+        }
+
+        function handleTilt(e, el) {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = -((y - centerY) / centerY) * 15;
+            const rotateY = ((x - centerX) / centerX) * 15;
+            el.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.05)`;
+            const glare = el.querySelector('.card-glare');
+            glare.style.background = `radial-gradient(circle at ${(x/rect.width)*100}% ${(y/rect.height)*100}%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 60%)`;
+        }
+
+        function resetTilt(el) {
+            el.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+        }
+
+        window.onload = loadData;
+    </script>
+</body>
+</html>
