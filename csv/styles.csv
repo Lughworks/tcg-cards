@@ -1,0 +1,6 @@
+id,name,icon_file,description
+fist,Brawler,style_fist.png,"Frontline bruisers that rely on close-combat pressure, trading blows and forcing direct engagements."
+leaf,Wild,style_leaf.png,"Instinct-driven creatures tied to nature and terrain, using regeneration and positional tricks."
+tech,Tech,style_tech.png,"Engineered or augmented creatures built around precision, efficiency, and combo-heavy play."
+star,Mythic,style_star.png,"Rare, high-impact creatures with unusual abilities that often bend or break normal rules."
+evo,Evolution Star,evo_star.png,"Represents evolution level; more stars usually mean higher power, tighter synergies, and sharper roles."

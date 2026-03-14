@@ -64,9 +64,18 @@
                 </div>
             </div>
             
-            <div class="hidden lg:flex gap-1 bg-zinc-900/50 p-1 rounded-full border border-zinc-800">
-                <button onclick="switchTab('base')" id="tab-base" class="nav-tab px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all">Base</button>
-                <button onclick="switchTab('evolved')" id="tab-evolved" class="nav-tab px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all">Evolved</button>
+            <div class="hidden lg:flex items-center gap-3">
+                <div class="bg-zinc-900/50 p-1 rounded-full border border-zinc-800 flex gap-1">
+                    <button onclick="switchTab('base')" id="tab-base" class="nav-tab px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all">Base</button>
+                    <button onclick="switchTab('evolved')" id="tab-evolved" class="nav-tab px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all">Evolved</button>
+                    <button onclick="switchTab('powers')" id="tab-powers" class="nav-tab px-4 py-2 rounded-full text-[10px] font-black uppercase tracking-widest transition-all">Powers</button>
+                </div>
+
+                <!-- Shiny toggle -->
+                <label class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-zinc-300 cursor-pointer">
+                    <span>Shiny</span>
+                    <input id="shinyToggle" type="checkbox" class="accent-orange-500" onchange="toggleShiny()">
+                </label>
             </div>
         </div>
     </nav>
@@ -93,27 +102,42 @@
     <script>
         const FILE_LOCATIONS = {
             csv: {
-                creatures: 'creatures.csv'
+                creatures: 'csv/creatures.csv',
+                powers:    'csv/powers.csv'
             },
             images: {
-                // rendered base + evo card PNGs
-                creatures_cards: 'cards/'
+                creatures_base:       'creatures_cards/',
+                creatures_evo:        'creatures_cards/',
+                creatures_base_shiny: 'shiny/creatures_cards_shiny/',
+                creatures_evo_shiny:  'shiny/creatures_cards_shiny/',
+                powers:               'powers_cards/',
+                powers_shiny:         'shiny/powers_cards_shiny/'
             }
         };
 
         let currentTab = 'base';
+        let shinyMode  = false;
         let creaturesData = [];
+        let powersData = [];
 
         async function loadData() {
             const status = document.getElementById('loadingStatus');
             status.classList.remove('hidden');
             
             try {
-                const creaturesRes = await fetch(FILE_LOCATIONS.csv.creatures);
+                const [creaturesRes, powersRes] = await Promise.all([
+                    fetch(FILE_LOCATIONS.csv.creatures),
+                    fetch(FILE_LOCATIONS.csv.powers)
+                ]);
+
                 const creaturesText = await creaturesRes.text();
+                const powersText    = await powersRes.text();
+
                 creaturesData = parseCSV(creaturesText);
+                powersData    = parseCSV(powersText);
+
                 status.classList.add('hidden');
-                switchTab('base'); 
+                switchTab('base');
             } catch (error) {
                 console.error('Error loading CSV files:', error);
                 status.innerText = "Error Loading CSV Data";
@@ -131,7 +155,7 @@
                 const obj = {};
                 headers.forEach((h, i) => {
                     let val = values[i] ? values[i].trim() : "";
-                    obj[h] = val.replace(/^"|"$/g, ''); 
+                    obj[h] = val.replace(/^"|"$/g, '');
                 });
                 return obj;
             });
@@ -143,34 +167,67 @@
             document.getElementById(`tab-${tabId}`).classList.add('active-tab');
             
             const titles = {
-                base:    { t: "BASE",    d: "Primary Creature Forms" },
-                evolved: { t: "EVOLVED", d: "Advanced Creature Forms" }
+                base:    { t: "BASE",    d: shinyMode ? "Shiny Primary Creature Forms"   : "Primary Creature Forms" },
+                evolved: { t: "EVOLVED", d: shinyMode ? "Shiny Advanced Creature Forms" : "Advanced Creature Forms" },
+                powers:  { t: "POWERS",  d: shinyMode ? "Shiny Power Cards"             : "Standard Power Cards" }
             };
             
-            document.getElementById('pageTitle').innerText = titles[tabId].t;
+            document.getElementById('pageTitle').innerText       = titles[tabId].t;
             document.getElementById('pageDescription').innerText = titles[tabId].d;
             render();
+        }
+
+        function toggleShiny() {
+            shinyMode = document.getElementById('shinyToggle').checked;
+            switchTab(currentTab);
         }
 
         function render() {
             const grid = document.getElementById('cardGrid');
             let html = '';
             let list = [];
+            let folder = '';
 
-            if (currentTab === 'base') {
-                // image_file like "1-pyroo-base.png"
-                list = creaturesData.filter(c => c.image_file.endsWith('-base.png'));
-            } else if (currentTab === 'evolved') {
-                // image_file like "1e-pyroth-evo.png"
-                list = creaturesData.filter(c => c.image_file.endsWith('-evo.png'));
+            if (currentTab === 'base' || currentTab === 'evolved') {
+                const isBase = currentTab === 'base';
+
+                list = creaturesData.filter(c => {
+                    const file = c.image_file;
+                    if (!file) return false;
+                    if (isBase) return file.endsWith('-base.png');
+                    return file.endsWith('-evo.png');
+                });
+
+                if (isBase) {
+                    folder = shinyMode ? FILE_LOCATIONS.images.creatures_base_shiny
+                                       : FILE_LOCATIONS.images.creatures_base;
+                } else {
+                    folder = shinyMode ? FILE_LOCATIONS.images.creatures_evo_shiny
+                                       : FILE_LOCATIONS.images.creatures_evo;
+                }
+
+                const suffix = shinyMode ? '-s.png' : '.png';
+
+                html = list.map(card => {
+                    let name = card.image_file;
+                    if (shinyMode && name.endsWith('.png')) {
+                        name = name.replace('.png', '-s.png');
+                    }
+                    return generateCardHTML(folder, name);
+                }).join('');
+            } else { // powers
+                list = powersData;
+                folder = shinyMode ? FILE_LOCATIONS.images.powers_shiny
+                                   : FILE_LOCATIONS.images.powers;
+
+                html = list.map(card => {
+                    let name = card.image_file;
+                    if (shinyMode && name.endsWith('.png')) {
+                        name = name.replace('.png', '-s.png');
+                    }
+                    return generateCardHTML(folder, name);
+                }).join('');
             }
-
-            const folder = FILE_LOCATIONS.images.creatures_cards;
-
-            html = list.map(card => {
-                const imgName = card.image_file;
-                return generateCardHTML(folder, imgName);
-            }).join('');
 
             grid.innerHTML = html;
             document.getElementById('cardCount').innerText =

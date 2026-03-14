@@ -1,0 +1,4 @@
+id,name,icon_file,description
+E,Single Energy,cost_E.png,"Light energy requirement; cheap powers you can weave into most turns without losing tempo."
+EE,Double Energy,cost_EE.png,"Moderate energy requirement; stronger effects that demand planning and careful sequencing."
+EEE,Triple Energy,cost_EEE.png,"Heavy energy requirement; late-game finishers or high-impact swings that define your strategy."

@@ -1,0 +1,13 @@
+id,name,icon_file,description
+attack,Attack Boost,cat_attack.png,"Increases a creature’s damage output for a turn or specific move, ideal for setting up big finishing hits."
+defense,Defense,cat_defense.png,"Raises armor, barriers, or shields to reduce incoming damage and keep key creatures alive longer."
+speed,Speed Boost,cat_speed.png,"Improves turn order and responsiveness so your creatures can act before opponents or take extra moves."
+healing,Healing,cat_heal.png,"Restores health instantly or over time, recovering from chip damage or stabilizing after heavy hits."
+amplifier,Amplifier,cat_amplifier.png,"Multiplies or enhances existing elemental effects, turning ordinary attacks into huge swings."
+element_shift,Element Shift,cat_shift.png,"Temporarily changes an attack’s element to exploit weaknesses or bypass specific resistances."
+status,Status,cat_status.png,"Applies stuns, slows, burns, freezes, or other debuffs that limit enemy options and tempo."
+cleanse,Cleanse,cat_cleanse.png,"Removes negative effects and battlefield hazards from your side to reset the board state."
+draw,Draw,cat_draw.png,"Improves card access by drawing or filtering, helping you find key powers and combo pieces."
+copy,Copy,cat_copy.png,"Replays or duplicates recent actions so you can reuse your strongest moves at the perfect time."
+ultimate,Ultimate Charge,cat_ultimate.png,"Builds toward extremely strong, high-cost abilities that can swing or decide entire games."
+utility,Utility,cat_utility.png,"Flexible tools that bend rules, move pieces, scout, or otherwise don’t fit neatly into other categories."

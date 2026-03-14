@@ -1,0 +1,34 @@
+id,name,element,cost,category,effect_text,bonus_text,image_file
+1,"Power Surge",Neutral,E,"Attack Boost","Unleashes a rapid surge of energy, bonus attack power temporarily.","Boost: +10% Attack",1-powersurge.png
+2,Overcharge,Fire,EE,"Attack Boost","Overloads internal systems to boost damage output for a short time.","Boost: +12% Attack",2-overcharge.png
+3,"Rage Drive",Fire,E,"Attack Boost","Harnesses fury to enhance attack strength for a limited duration.","Boost: +8% Attack",3-ragedrive.png
+4,"Iron Shield",Steel,E,Defense,"Raises a strong barrier to absorb incoming damage.","Boost: +10% Defense",4-ironshield.png
+5,"Reflect Barrier",Steel,E,Defense,"Creates a defensive shield that reflects a some attacks back to attackers.","Boost: +8% Defense",5-reflectbarrier.png
+6,Fortify,Steel,EE,Defense,"Reinforces armor and resilience, reducing damage taken.","Boost: +12% Defense",6-fortify.png
+7,Quickstep,Wind,E,"Speed Boost","Increases agility, allowing faster actions in battle.","Boost: +10% Speed",7-quickstep.png
+8,"Time Pulse",Wind,E,"Speed Boost","Manipulates timing to gain a brief speed advantage.","Boost: +8% Speed",8-timepulse.png
+9,"Momentum Shift",Wind,EE,"Speed Boost","Uses accumulated momentum to move and act more swiftly.","Boost: +12% Speed",9-momentumshift.png
+10,"Healing Wave",Nature,E,Healing,"Emits a restorative wave to heal minor damage of allies.","Boost: +10% Healing",10-healingwave.png
+11,Regrowth,Nature,E,Healing,"Stimulates natural recovery that slowly restoring health over time.","Boost: +8% Healing",11-regrowth.png
+12,"Life Surge",Nature,EE,Healing,"Releases stored energy to heal self or an ally in a single burst.","Boost: +12% Healing",12-lifesurge.png
+13,"Element Amplifier",Crystal,E,Amplifier,"Enhances elemental powers, boosting the effectiveness of elemental attacks.","Boost: +10% Elemental Damage",13-elementamplifier.png
+14,"Element Shift",Crystal,E,"Element Shift","Switches the element of attacks to exploit weaknesses.","Boost: +8% Elemental Damage",14-elementshift.png
+15,"Dual Infusion",Crystal,EE,Amplifier,"Combines two elements to strengthen attacks or effects.","Boost: +12% Elemental Damage",15-dualinfusion.png
+16,"Stun Pulse",Void,E,Status,"Emits a pulse that may temporarily paralyze enemies.","Boost: +10% Status Chance",16-stunpulse.png
+17,"Freeze Trap",Ice,E,Status,"Freezes a targeted area, slowing or immobilizing foes.","Boost: +8% Status Duration",17-freezetrap.png
+18,"Disrupt Field",Tech,EE,Status,"Creates an unstable field that disrupts enemy actions.","Boost: +12% Status Effect",18-disruptfield.png
+19,"Cleanse Light",Neutral,E,Cleanse,"Removes minor negative effects from self or allies.","Boost: +10% Cleansing Efficiency",19-cleanselight.png
+20,"Purge Toxin",Toxic,EE,Cleanse,"Eliminates poisonous effects and harmful conditions.","Boost: +12% Cleansing Efficiency",20-purgetoxin.png
+21,"Reset Field",Tech,E,Cleanse,"Clears all battlefield effects, restoring a neutral state.","Boost: +8% Cleansing Efficiency",21-resetfield.png
+22,"Tactical Draw",Tech,E,Draw,"Allows strategic selection of next action or card with advantage.","Boost: +10% Draw Efficiency",22-tacticaldraw.png
+23,"Mind Insight",Psychic,EE,Draw,"Reveals the opponent’s next move to plan accordingly.","Boost: +12% Draw Insight",23-mindinsight.png
+24,"Arcane Discovery",Psychic,E,Draw,"Discovers hidden abilities or resources for tactical use.","Boost: +8% Draw Advantage",24-arcanediscovery.png
+25,Copycat,Neutral,E,Copy,"Duplicates an enemy’s last action or ability for immediate use.","Boost: +10% Copy Effectiveness",25-copycat.png
+26,"Mirror Cast",Neutral,EE,Copy,"Reflects and repeats the most recent attack or spell.","Boost: +12% Copy Damage",26-mirrorcast.png
+27,"Echo Technique",Neutral,E,Copy,"Replicates a previously used skill for added impact.","Boost: +8% Copy Duration",27-echotechnique.png
+28,"Ultimate Charge",Plasma,EEE,"Ultimate Charge","Builds energy toward a devastating ultimate attack.","Boost: +10% Ultimate Gain",28-ultimatecharge.png
+29,"Overdrive Core",Plasma,EEE,"Ultimate Charge","Pushes core systems beyond limits to charge an ultimate move.","Boost: +12% Ultimate Gain",29-overdrivecore.png
+30,"Final Catalyst",Plasma,EEE,"Ultimate Charge","Triggers the final phase of energy accumulation for maximum power.","Boost: +15% Ultimate Damage",30-finalcatalyst.png
+31,"Energy Recharge",Neutral,E,Utility,"Restores energy or resource points to self or allies.","Boost: +10% Energy Restoration",31-energyrecharge.png
+32,"Field Control",Tech,EE,Utility,"Manipulates the battlefield to gain tactical advantage.","Boost: +12% Control Effectiveness",32-fieldcontrol.png
+33,"Battle Protocol",Tech,E,Utility,"Activates a pre-programmed strategy for optimized performance.","Boost: +8% Tactical Efficiency",33-battleprotocol.png
